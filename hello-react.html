@@ -14,7 +14,13 @@
     
     // -- 範例 --
     window.addEventListener("load", () => {
-
+      // 1. 建立一個 H1 的 React Element，但沒有設定屬性，所以帶入 null，加入 Hello React 的文字，文字可以視為子元件
+      //    相當於建立 <h1>Hello React</h1>
+      let reactElement = React.createElement("H1", null, "Hello React");
+      // 2. 將建立好的 React Element 渲染到容器中，此處的容器使用 HTML Body Element
+      ReactDOM.render(
+        reactElement, document.body
+      );
     })
   </script>
 </head>
